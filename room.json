@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Planner",
+    "responds_to": "calendar|planner|schedule",
+    "url": "https://rwx58n-5000.csb.app/calendar"
+  },
+  {
+    "name": "Planner",
+    "responds_to": "add (?P<title>[^ ]*) (?P<location>[^ ]*) (?P<date>[0-9]{1,2}/[0-9]{1,2})",
+    "url": "https://rwx58n-5000.csb.app/add"
+  },
+  {
+    "name": "Planner",
+    "responds_to": "(getold|showold) (?P<event>.*)",
+    "url": "https://rwx58n-5000.csb.app/get"
+  },
+  {
+    "name": "Planner",
+    "responds_to": "(getold|showold)all",
+    "url": "https://rwx58n-5000.csb.app/get/all"
+  },
+  {
+    "name": "Planner",
+    "responds_to": "(delete|remove) (?P<event>.*)",
+    "url": "https://rwx58n-5000.csb.app/delete"
+  },
+  {
+    "name": "Planner",
+    "responds_to": "(create|get|show|help)( |$)",
+    "url": "https://rwx58n-5000.csb.app/create"
+  }
+]

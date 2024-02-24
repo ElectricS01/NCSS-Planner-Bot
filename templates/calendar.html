@@ -1,0 +1,33 @@
+<div class="calendar">
+    <h1>{{user}}'s Calendar</h1>
+    <h3>{{month[0]}} - 2024</h3>
+    <div class="days">
+        <button id="mon" class="day titleday">Mon</button>
+        <button id="tue" class="day titleday">Tue</button>
+        <button id="wed" class="day titleday">Wed</button>
+        <button id="thu" class="day titleday">Thu</button>
+        <button id="fri" class="day titleday">Fri</button>
+        <button id="sat" class="day titleday">Sat</button>
+        <button id="sun" class="day titleday">Sun</button>
+        {% for i in range(start) %}
+        <div></div>
+        {% endfor %}
+        {% for i in days %}
+        <button class="day{% if i == today %} today{% endif %}{% if events[i]|length >= 1 %} active{% endif %}">
+            {{i}}
+            <div class="events">
+                <h3>{{i}}/{{month[1]}}/2024{% if i == today %} (Today){% endif %}</h3>
+                {% if events[i]|length >= 1 %}
+                <ul>
+                    {% for j in events[i] %}
+                    <li><b>{{j.title}}</b>, {{j.location}}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No events</p>
+                {% endif %}
+            </div>
+        </button>
+        {% endfor %}
+    </div>
+</div>

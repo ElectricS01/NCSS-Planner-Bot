@@ -1,0 +1,56 @@
+.calendar {
+  border-radius: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.calendar > h3 {
+  margin-top: 0 !important;
+}
+.days {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 0.5rem;
+}
+.day {
+  position: relative;
+  border-radius: 1rem;
+  border: 0;
+  padding: 0.5rem;
+  background-color: #66f2f2;
+}
+
+.day.titleday {
+  background-color: #66b1f2;
+}
+.day:hover:not(.titleday) {
+  cursor: pointer;
+  background-color: #f28888;
+}
+.day:focus-within .events {
+  display: block;
+  cursor: default;
+}
+
+.active {
+  background-color: #f2b263;
+}
+.today {
+  background-color: #a3f26b;
+}
+
+.events {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 15rem;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  text-align: left;
+  box-shadow: 0 0 0.5rem #000000;
+}

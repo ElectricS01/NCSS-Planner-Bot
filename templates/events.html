@@ -1,0 +1,6 @@
+<h1>{{user}}'s Events</h1>
+<ul>
+    {% for i in events %}
+    <li><b>{{i.title}}</b>, {{i.location}} ({{i.time}})</li>
+    {% endfor %}
+</ul>
